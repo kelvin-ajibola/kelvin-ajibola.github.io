@@ -1,0 +1,396 @@
+body{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    padding-left: 1rem;
+    transition: all 0.5s;
+}
+
+/* /////////////////////////////////////////////////////////////// */
+/* Left Area */
+
+.left{
+    width: 20rem;
+    height: 100vh;
+    border: 10px;
+    align-items: right;
+    border-left: 4rem;
+    overflow-y: scroll;
+}
+/* Logo Container */
+.logo-container{
+    padding: 1rem;
+    padding-left: 0px;
+    border-radius: 15px;
+    width: 90%;
+}
+.logo{
+    width:100%;
+    border-radius: 15px;
+}
+.smooth{
+    transition: all 0.5s;
+}
+
+/* Navigations */
+.nav{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+.left-container{
+    margin-top: 1rem;
+    border-radius: 15px;
+    background-color: rgba(214, 214, 214, 0.281);
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+
+}
+.text{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+.img{
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.btn{
+    border: none;
+    background: none;
+    height: 2.5rem;
+    display: flex;
+    align-items: left;
+    flex-direction: row;
+    margin-top: 5px;
+
+}
+.navtext{
+    margin-top: 5px;
+    margin-left: 15px;
+}
+.icon{
+    height: 1rem;
+    width: 1rem;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+.active{
+    font-weight:bolder;
+    border-left: 5px solid rgb(168, 168, 168);
+}
+
+/* Course Status */
+.course-status{
+    display: flex;
+    flex-direction: row;
+}
+.cs-icon{
+    margin: 1rem;
+    height: 2.1rem;
+    width: 2.1rem;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+}
+h3{
+    font-weight: bolder;
+    margin-bottom: 0px;
+    color: inherit;
+}
+h4{
+    margin-top: 5px;
+    font-weight: lighter;
+    font-size: small;
+    color: inherit;
+}
+
+/* User Statistics */
+.user-stats{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: row;
+}
+.stat-box{
+    width: 45%;
+    margin-right: 10%;
+}
+.stat-icon{
+    padding: 10px;
+    padding-bottom: 0px;
+    height: 1.2rem;
+    width: 1.2rem;
+}
+.stat-text{
+    padding-left: 10px;
+}
+
+/* Tutor Information */
+.tutor-info{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    margin-bottom: 1rem;
+}
+.tut-menu{
+    height: 2rem;
+    margin-left: none;
+}
+.tut-btn{ 
+    align-self: center;
+    border-radius: 15px;
+    margin: auto;
+    padding-top: 5px;
+}
+.tutor-icon{
+    margin: 1rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 10px;
+    margin-top: 1.3rem;
+}
+
+/* ///////////////////////////////////////////////////////////////// */
+/* Middle Area */
+.middle{
+    border-right: 1px solid rgb(201, 201, 201);
+    border-left: 1px solid rgb(201, 201, 201);
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    overflow-y: scroll;
+
+}
+/* streamers title */
+
+.title{
+    display: flex;
+    width: 100%;
+    padding-bottom: 0px;
+}
+b{
+    font-weight: 1000;
+    color: inherit;
+}
+h1{
+    font-weight: lighter;
+    color: inherit;
+}
+.meatball-op{
+    background:none ;
+    border: none;
+    align-content:flex-end ;
+    margin: auto;
+    margin-right: 2px;
+    border-radius: 15px;
+}
+.meatball{
+    height: 3rem;
+    width: 3rem;
+}
+/* Streamers story */
+.s-main{
+    display: flex;
+    padding: 0.5rem;
+    padding-top: 0px;
+    overflow-x: scroll;
+    width: 90%;
+}
+.s-container{
+    border: 3px solid rgb(255, 131, 82);
+    height: fit-content;
+    width: fit-content;
+    border-radius: 20px;
+    display: flex;
+    align-content: center;
+    margin: 0.5rem;
+}
+.s-icon{
+    margin: 2px;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 15px;
+    align-self: center;
+    transition: all 0.2s;
+}
+/* Popular This Week */
+.pop-main{
+    display: flex;
+    flex-direction: row;
+}
+.pop-course{
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    height: 25rem;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+}
+.pop-tut{
+    color: white;
+    border-radius: inherit;
+    padding: 1rem;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.o-btn{
+    background-color: rgb(238, 85, 46);
+    width: fit-content;
+    border-radius: 7px;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.course-info{
+    border-radius: 15px;
+    margin: auto;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    font-weight: bolder;
+    font-size: 1vw;
+    color: white;
+    padding: 1rem;
+    padding-top: 0.5rem;
+    height: 3.5rem;
+    overflow-y: scroll;
+}
+/* Top Tutors */
+.top-main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 1.5rem;
+    justify-items: center;
+    overflow-y: scroll;
+    height: 12rem;
+}
+.top-info{
+    height: min-content;
+    margin: 0px;
+    overflow-y:auto ;
+}
+.sub-btn{
+    border-radius: 100px;
+    background-color: white;
+    box-shadow: 0px 1px 2px rgb(114, 114, 114);
+    transition: all 0.1s;
+    height: 2rem;
+    width: 2rem;
+    padding: 0px;
+    margin-right: 1rem;
+
+}
+
+/* ///////////////////////////////////////////////////////////// */
+/* Right area */
+
+.right{
+    width: 30%;
+    height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.adv-search{
+    padding-bottom: 4rem;
+}
+.as-main{
+    display: flex;
+    flex-direction: row;
+}
+.ad-search-box{
+    height: 3rem;
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(214, 214, 214, 0.281);
+    padding-left: 2rem;
+}
+.f-btn{
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 0rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    transition: all 0.2s;
+}
+.sc-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas: 
+    "firstCourse firstCourse"
+    "oCourse oCourse2";
+}
+.sc-course{
+    border-radius: 15px;
+    padding-bottom: 0.1rem;
+    color: white;
+    background-position: center;
+    height: fit-content;
+}
+.sc1{
+    grid-area: firstCourse;
+}
+.sc2{
+    grid-area: oCourse;
+}
+.sc3{
+    grid-area: oCourse;
+}
+
+/* //////////////////////////////////////////////////////////////////////// */
+/* Animations and webkits */
+::-webkit-scrollbar{
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0);
+}
+::-webkit-scrollbar-thumb{
+    background: rgba(185, 185, 185, 0.062);
+    border-radius: 100px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: gray;
+}
+.btn:hover{
+    background: rgba(194, 194, 194, 0.253);
+    font-size: 0.9rem;
+}
+.left-container:hover{
+    background: linear-gradient(rgba(128, 128, 128, 0.192), rgba(128, 128, 128, 0.082));
+    font-size: 1rem;
+}
+.s-icon:hover{
+    margin: 0px ;
+    height: 3rem;
+    width: 3rem;
+}
+.pop-tut:hover{
+    background: linear-gradient(rgba(97, 97, 97, 0.884), rgba(255, 255, 255, 0));
+}
+.pop-course:hover{
+    background-position: top ;
+}
+.sub-btn:hover{
+    height: 2.5rem;
+    width: 2.5rem;
+    background: white;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+.f-btn:active{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
