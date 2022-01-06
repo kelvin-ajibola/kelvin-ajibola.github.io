@@ -350,6 +350,28 @@ h1{
     grid-area: oCourse;
 }
 
+/* Special Offers */
+.so-card{
+    background:  linear-gradient(rgba(156, 80, 33, 0.5), rgba(255, 255, 255, 0)), url('images/other/special.jpg');
+    background-position: center;
+    height: 8rem;
+    border-radius: 15px;
+    padding: 2rem;
+    color: white;
+}
+.more-btn{
+    border: none;
+    background: white;
+    color: rgb(170, 75, 11);
+    padding: 1rem;
+    padding-top: 0.8rem;
+    border-radius: 15px;
+    font-weight: bolder;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+
 /* //////////////////////////////////////////////////////////////////////// */
 /* Animations and webkits */
 ::-webkit-scrollbar{
@@ -393,4 +415,14 @@ h1{
 .f-btn:active{
     padding-left: 2rem;
     padding-right: 2rem;
+}
+.so-card:hover{
+    background-position: bottom;
+}
+.more-btn:hover{
+    background: rgba(255, 255, 255, 0.74);
+}
+.more-btn:active{
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
 }

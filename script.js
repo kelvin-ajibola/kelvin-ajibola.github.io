@@ -9,6 +9,7 @@ const find = document.querySelector('.f-btn');
 const discbtn = document.querySelector('.discbtn');
 const messbtn = document.querySelector('.messbtn');
 const setbtn = document.querySelector('.setbtn');
+const morebtn = document.querySelector('.more-btn')
 
 
 const tutorCourses = function(name){
@@ -168,3 +169,4 @@ const pageError =  function(){
 setbtn.addEventListener('click', pageError);
 messbtn.addEventListener('click', pageError);
 discbtn.addEventListener('click', pageError);
+morebtn.addEventListener('click', pageError)
