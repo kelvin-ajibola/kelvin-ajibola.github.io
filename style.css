@@ -1,4 +1,4 @@
-body{
+main{
     background-color: rgb(255, 255, 255);
     display: flex;
     padding-left: 1rem;
@@ -79,6 +79,18 @@ body{
 .active{
     font-weight:bolder;
     border-left: 5px solid rgb(168, 168, 168);
+}
+
+.show-cur{
+    margin: 10px;
+    margin-top: 0px;
+    height: 2rem;
+    font-weight: bolder;
+    background-color: rgba(187, 187, 187, 0.295);
+    border: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: none;
 }
 
 /* Course Status */
@@ -291,6 +303,7 @@ h1{
 
 }
 
+
 /* ///////////////////////////////////////////////////////////// */
 /* Right area */
 
@@ -371,7 +384,60 @@ h1{
     transition: all 0.2s;
 }
 
-
+@media only screen and (max-width: 768px) {
+    [class*="main"] {
+        flex-direction: column;
+    }
+    [class*="logo"] {
+        display: none;
+    }
+    [class*="nav"]{
+        flex-direction: row;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+        align-content: center;
+        width: fit-content;
+        overflow-x: scroll;
+    }
+    [class*="course-status"], [class*="tutor-info"], [class*="user-stats"] {
+        display: none;
+    }
+    [class*="pop-tut"], [class*="o-tut"], [class*="top-info"] {
+        display: flex;
+    }
+    [class*="show-cur"]{
+        display: block;
+    }
+    [class*="active"] {
+        border-left: none;
+    }
+    [class*="s-main"] {
+        flex-direction: row;
+    }
+    [class*="left"], [class*="right"] {
+        width: 100%;
+        height: min-content;
+    }
+    [class*="middle"]{
+        width: 100%;
+        margin-left: 0px;
+        border-left: 0px;
+    }
+    [class*="pop-main"]{
+        flex-direction: column;
+    }
+    [class*="pop-course"]{
+        height: 20rem;
+        margin-bottom: 1rem;
+        width: 90%;
+    }
+    [class*="course-info"] {
+        font-size: 100%;
+    }
+    [class*="top-main"] {
+        display: grid;
+    }
+}
 /* //////////////////////////////////////////////////////////////////////// */
 /* Animations and webkits */
 ::-webkit-scrollbar{

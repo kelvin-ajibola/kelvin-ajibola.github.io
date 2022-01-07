@@ -9,7 +9,11 @@ const find = document.querySelector('.f-btn');
 const discbtn = document.querySelector('.discbtn');
 const messbtn = document.querySelector('.messbtn');
 const setbtn = document.querySelector('.setbtn');
-const morebtn = document.querySelector('.more-btn')
+const morebtn = document.querySelector('.more-btn');
+const showbtn = document.querySelector('.show-cur');
+const cStats = document.querySelector('.course-status');
+const uStats = document.querySelector('.user-stats');
+const tInfo = document.querySelector('.tutor-info');
 
 
 const tutorCourses = function(name){
@@ -107,7 +111,7 @@ const showCourses = function(){
         }else {
             sCourses.insertAdjacentHTML('beforeend', `
             <div class="smooth pc${i} sc-course sc${scCounter}" onmouseover= "animatebg(${i})" onmouseout= "animatebg2(${i})">
-            <div class="tutor-info smooth">
+            <div class="o-tut tutor-info smooth">
                 <img class=" img tutor-icon " src="images/tutors/${course.tutor.img}">
                 <div class="text">
                     <h3>${course.tutor.tName}</h3><h4>@${course.tutor.handle}</h4>
@@ -165,6 +169,18 @@ find.addEventListener('click', function(){
 const pageError =  function(){
     alert('Sorry, The page you requested is still under construction');
 }
+
+showbtn.addEventListener('click', function(){
+    if(cStats.style.display != 'flex'){
+        cStats.style.display = 'flex';
+        uStats.style.display = 'flex';
+        tInfo.style.display = 'flex';
+    }else {
+        cStats.style.display = 'none';
+        uStats.style.display = 'none';
+        tInfo.style.display = 'none';
+    }
+});
 
 setbtn.addEventListener('click', pageError);
 messbtn.addEventListener('click', pageError);
