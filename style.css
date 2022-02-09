@@ -3,7 +3,6 @@ body{
 }
 main{
     display: flex;
-    padding-left: 1rem;
     transition: all 0.5s;
 }
 .hidden{
@@ -415,6 +414,7 @@ li{
 @media only screen and (max-width: 1000px) {
     [class*="main"] {
         flex-direction: column;
+
     }
     [class*="logo"] {
         display: none;
@@ -445,11 +445,13 @@ li{
     [class*="left"], [class*="right"] {
         width: 100%;
         height: min-content;
+        padding: 0px;
     }
     [class*="middle"]{
         width: 100%;
         margin-left: 0px;
         border-left: 0px;
+        padding: 0px;
     }
     [class*="pop-main"]{
         flex-direction: column;
