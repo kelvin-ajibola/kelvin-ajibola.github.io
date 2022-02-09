@@ -1,10 +1,14 @@
+body{
+    background-color: rgba(82, 82, 82, 0.822);
+}
 main{
-    background-color: rgb(255, 255, 255);
     display: flex;
     padding-left: 1rem;
     transition: all 0.5s;
 }
-
+.hidden{
+    display: none;
+}
 /* /////////////////////////////////////////////////////////////// */
 /* Left Area */
 
@@ -316,7 +320,7 @@ h1{
     overflow-y: scroll;
 }
 .adv-search{
-    padding-bottom: 4rem;
+    padding-bottom: 1rem;
 }
 .as-main{
     display: flex;
@@ -337,6 +341,30 @@ h1{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     transition: all 0.2s;
+}
+.sr-list{
+    background-color: rgba(95, 95, 95, 0.404);
+    border:2px solid rgba(173, 173, 173, 0.753);
+    max-width: fit-content;
+    border-radius:  7px;
+    transform: translateY(-20px);
+    max-height: 15rem;
+    overflow-y: scroll;
+    position: absolute;
+    backdrop-filter: blur(5px);
+}
+li{
+    list-style-type: none;
+    z-index: 5;
+}
+.tut-s-img{
+    width: 3rem;
+    border-radius: 3px;
+}
+.ts-handle{
+    color: rgba(0, 0, 0, 0.856);
+    padding-left: 2rem;
+    padding-bottom: 5px;
 }
 .sc-main{
     display: grid;

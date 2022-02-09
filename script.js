@@ -14,6 +14,7 @@ const showbtn = document.querySelector('.show-cur');
 const cStats = document.querySelector('.course-status');
 const uStats = document.querySelector('.user-stats');
 const tInfo = document.querySelector('.tutor-info');
+const srList = document.querySelector(".sr-list");
 
 
 const tutorCourses = function(name){
@@ -42,7 +43,7 @@ const tutors = [
 ];
 
 const courses = [
-    {cName: 'Illustrator Scenes', tutor: tutors[10], info: 'Learning How To Create Beautiful Scenes In Illustrator In 60 minutes', dur: 82, popular: true, color: 'rgba(165, 42, 42, 0.699)', img: 'course_scenes.jpg', displayed: false},
+    {cName: 'Illustrator Scenes', tutor: tutors[10], info: 'Learning How To Create Beautiful Scenes In Illustrator In 60 minutes', dur: 5, popular: true, color: 'rgba(165, 42, 42, 0.699)', img: 'course_scenes.jpg', displayed: false},
     {cName: 'Illustrator Potrait', tutor: tutors[11], info: 'Creating a Beautiful Potrait Illustration. Learning new Technics and Ticks', dur: 82, popular: true, color: 'rgba(80, 80, 80, 0.699)', img: 'course_potraits.jpg', displayed: false },
     {cName: 'Illustrator Scenes', tutor: tutors[11], info: 'Making Beautiful Scene with New Presets, Created by Senior Illustrator', dur: 64, popular: false, color: 'rgba(102, 78, 154, 0.699)', img: 'beautiful_scenes.jpg', displayed: false },
     {cName: 'Secret Garden Tutorial', tutor: tutors[3], info: 'Secret Garden Great Tutorial for Middle Illustrators', dur: 49, popular: false, color: 'rgba(251, 208, 79, 0.699)', img: 'secret_garden.jpg', displayed: false },
@@ -161,11 +162,57 @@ const animatebg2 = function(i){
     document.querySelector(`.pc${i}`).style.backgroundPosition = 'center'
 };
 
-// Search Function (find btn)
+// Search Function 
+// Visual List Stuff
+const updateVisual = function(){
+    srList.classList.remove("hidden")
+    srList.innerHTML = ""
+    searchProd.forEach(function(item){
+        if(item.type == "tutor"){
+            srList.insertAdjacentHTML('beforeend',
+            `<li id="ts${item.index}"><img class="tut-s-img" src="images/tutors/${item.img}"><b class="text ts-handle">@${item.handle}</b></li>`);
+        }else if(item.type == "course"){
+            // SOMEJS
+        }
+    });
+};
+// Actual function
+const searchProd = [];
+const advSearch = function(){
+    searchProd.splice(0)
+    const value = searchbar.value;
+    if(value){
+        tutors.forEach(function(tutor){
+            if(tutor.tName.toLowerCase().includes(value.toLowerCase()) || tutor.handle.toLowerCase().includes(value.toLowerCase())){
+                tutor.type = "tutor";
+                searchProd.push(tutor);
+            };
+        });
+        courses.forEach(function(course){
+            if(course.cName.toLowerCase().includes(value.toLowerCase())){
+                course.type = "course";
+                searchProd.push(course);
+            };
+        });
+        updateVisual()
+    };
+};
+find.addEventListener('click', advSearch);
+document.addEventListener("keydown", function(e){
+    advSearch()
+    if(e.key == "Enter" && searchbar.value){
+         advSearch()
+         updateVisual()
+    }
+})
+document.addEventListener("click", function(){
+    srList.classList.add("hidden")
+})
 
-find.addEventListener('click', function(){
-    alert(`Sorry, we're having trouble getting you "${searchbar.value}"`);
-});
+
+
+
+// Unavailable Pages
 const pageError =  function(){
     alert('Sorry, The page you requested is still under construction');
 }
@@ -182,7 +229,9 @@ showbtn.addEventListener('click', function(){
     }
 });
 
+
+
 setbtn.addEventListener('click', pageError);
 messbtn.addEventListener('click', pageError);
 discbtn.addEventListener('click', pageError);
-morebtn.addEventListener('click', pageError)
+morebtn.addEventListener('click', pageError);
